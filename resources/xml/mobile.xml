@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+	
+	<!-- Bean using setter dependency  -->
+	<bean id="motoe2" class="com.gslab.depeninjection.model.Mobile">
+		<property name="mobileNumber" value="84128"></property>
+		<property name="holderName" value="Kartik"></property>
+		<property name="city" value="Pune"></property>
+		<property name="message" ref="message"></property>
+	</bean>
+	<!-- Bean using constructor dependency -->
+	<bean id="redminote5pro" class="com.gslab.depeninjection.model.Mobile">
+		 <constructor-arg name="mobileNumber" value="2013"></constructor-arg>
+		 <constructor-arg name="holderName" value="kartik karekar"></constructor-arg>
+		 <constructor-arg name="city" value="Pune"></constructor-arg>
+		 <constructor-arg name="message" ref="message"></constructor-arg>
+	</bean>
+	<bean id="message" class="com.gslab.depeninjection.model.Message">
+		<property name="id" value="1001"></property>
+		<property name="message" value="this is my first message"></property>
+	</bean>
+
+</beans>
