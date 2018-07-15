@@ -1,9 +1,19 @@
 package com.gslab.depeninjection.model;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
+
+@Component
 public class Mobile {
+	
+	@Value("1002")
 	private int mobileNumber;
+	@Value("kartik karekar")
 	private String holderName;
+	@Value("Pune")
 	private String city;
+	@Autowired
 	private Message message;	
 	public Mobile(int mobileNumber, String holderName, String city, Message message) {
 		System.out.println("inside param cons : Mobile");
