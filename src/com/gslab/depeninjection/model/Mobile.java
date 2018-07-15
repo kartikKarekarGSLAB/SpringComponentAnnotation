@@ -13,7 +13,6 @@ public class Mobile {
 	private String holderName;
 	@Value("Pune")
 	private String city;
-	@Autowired
 	private Message message;	
 	public Mobile(int mobileNumber, String holderName, String city, Message message) {
 		System.out.println("inside param cons : Mobile");
